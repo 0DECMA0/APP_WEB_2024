@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Calculadora</title>
+    <script type="text/javascript">
+        function operacion() {
+            console.log("La función operacion se ejecutó");
+            let n1 = parseFloat(document.getElementById("n1").value);
+            let n2 = parseFloat(document.getElementById("n2").value);
+            let tipoope = document.getElementById("tipo").value;
+            let ope;
+
+            if (isNaN(n1) || isNaN(n2)) {
+                document.getElementById("resultado").innerHTML = "<h2>Por favor ingresa números válidos</h2>";
+                return;
+            }
+
+            switch (tipoope) {
+                case "+":
+                    ope = n1 + n2;
+                    break;
+                case "-":
+                    ope = n1 - n2; break;
+                case "*":
+                    ope = n1 * n2; break;
+                case "/":
+                    ope = n1 / n2; break;
+            }
+
+            let resul = document.getElementById("resultado");
+            resul.innerHTML = `<h2>${n1} ${tipoope} ${n2} = ${ope}</h2>`;
+        }
+    </script>
+</head>
+<body>
+<header>
+
+</header>
+
+<section>
+    <article>
+        <h1>.: Calculadora Basica:.</h1>
+        <hr>
+    </article>
+    <article>
+        <form action="">
+            <label for="num1">Primer Numero  :</label>
+            <input type="number" id="n1" autofocus><br>
+            <label for="num2">Segundo Numero:</label>
+            <input type="number" id="n2"><br>
+            <Label>Tipo de operacion</Label>
+            <select id="tipo">
+                <option value="Selecciona" selected>Seleccionar</option>
+                <option value="+" >Suma +</option>
+                <option value="-">Resta -</option>
+                <option value="*">Multiplicacion *</option>
+                <option value="/">Division /</option>
+            </select><br>
+            <input type="button" onclick="operacion()" value="Calcular">
+            <hr>
+        </form>
+        <div id="resultado"></div>
+    </article>
+</section>
+</body>
+</html>
