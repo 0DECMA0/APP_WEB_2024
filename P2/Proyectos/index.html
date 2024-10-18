@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Menu Proyectos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        body {
+            background-color: silver;
+            min-height: 100vh; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        h1 {
+            background-color: rgba(128, 128, 128, 0.489);
+            padding: 2rem;
+            text-align: center;
+            color: white;
+            text-decoration: underline;
+            font-style: italic;
+            font-weight: normal;
+            margin-bottom: 2rem;
+        }
+
+        #contenedor {
+            background-image: url(pexels-theplanetspeaks-10897068.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            flex: 1; 
+        }
+
+        #tabla {
+            margin-top: 150px;
+        }
+
+        #tabla a:hover {
+            text-decoration: underline;
+        }
+
+        #tabla a {
+            text-align: center;
+            display: block;
+            margin-top: 1rem;
+            font-size: 2rem;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            width: 100%;
+           
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contenedor">
+        <h1>Menu de Proyectos de FrontEnd</h1>
+        <div id="tabla">
+            <a href="calculos.js/index.html" target="_blank">Calculos JS</a>
+            <a href="menu_horizontal_css/index.html" target="_blank">Menu Horizontal CSS</a>
+            <a href="proyectoweb/" target="_blank">Proyectos Web</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Por Delgado Cabrera Miguel Angel.
+    </footer>
+</body>
+
+</html>
